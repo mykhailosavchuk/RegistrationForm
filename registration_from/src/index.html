@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration Form</title>
+</head>
+<body>
+<div class="container">
+    <h1>Designed by Mykhailo</h1>
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <div style="position: relative;">
+                <input type="password" id="password" name="password" required>
+                <span class="toggle-password" onclick="togglePassword()">
+    <img src="https://cdn-icons-png.flaticon.com/512/159/159604.png" alt="Show/Hide" width="24" height="24">
+</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">I accept the terms and conditions</label>
+        </div>
+        <div class="form-group">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+<script>
+    function togglePassword() {
+    const password = document.getElementById("password");
+    password.type = password.type === "password" ? "text" : "password";
+}
+
+</script>
+</body>
+</html>
+
